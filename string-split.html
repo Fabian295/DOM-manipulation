@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the array values after the split.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "http://history.html#list";
+  var res = str.split("#");
+  // var res = str.split("http://history.html");
+
+  document.getElementById("demo").innerHTML = res;
+  console.log(res[1]);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        /* main,div,p,span{ 
+            border: 1px solid black;
+         } */
+        main{
+            position: relative;
+            position: absolute;
+            border: 1px solid black;
+            width: 800px;
+            height: 500px;
+            margin: auto;
+            background-color: rgb(160, 153, 153);
+            z-index: 60;
+        }
+        div{
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            border: 1px solid black;
+            width: 700px;
+            height: 400px;
+            /* margin: auto; */
+            background-color: rgb(178, 207, 221);
+            
+            }
+        p{
+            position: relative;
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            border: 1px solid black;
+            justify-content: center;
+            text-align: center;
+            align-content: center;
+            width: 600px;
+            height: 300px;
+            z-index: 90;
+            /* margin: auto; */
+            
+            background-color: rgb(160, 153, 153);
+            }
+        span{
+            display:inline-block;
+            position: absolute;
+            right: 100px;
+            top: 50px;
+            border: 1px solid red;
+            width: 400px;
+            height: 200px;
+            /* margin: auto; */
+            background: rgb(94, 207, 109);
+            z-index: 100;
+            }
+        .gold{
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    Hello
+    <main id="m">
+        <div id="d">
+            <p  id="p">
+                <span  id="s">Hello Worlds</span>
+            </p>
+        </div>
+    </main>
+    <script src="./ev-bubble.js"></script>
+</body>
+</html>

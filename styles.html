@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Styling de DOM via JS</title>
+</head>
+<body>
+    <header>
+        <h1 role="heading">Fun With Styles</h1>
+    </header>
+    <main role="main" class="some" id="main">
+    <h2>Classic Movies</h2>
+    <ul>
+        <li data-year="1994">TheShawshank Redemption</li>
+        <li data-year="1994">Pulp Fiction</li>
+        <li data-year="1999">Fight Club</li>
+        <li data-year="1994">Forestt Gump</li>
+        <li data-year="1995">The Usual Suspects</li>
+    </ul>
+    <!-- <button onclick="handleClick()">click toggle class</button> -->
+    </main>
+    <footer role="contentinfo" id="foot">
+    <p class="other">&copy; 2020</p>
+    <button onclick="handleClick()">click toggle class</button>
+    <button onclick="backgroundClick()">Change BG-color</button>
+    <button onclick="cssClick()">Change cssText</button>
+    </footer>
+    <script src="script.js"></script>
+    <script src="styling.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 3.0rem;
+        }
+         code {
+            color: red;
+        }
+      p, li {
+           /* display: list; */
+            font-size: 1.2rem;
+            font-family: sans-serif;
+            padding: 0.5rem 2rem;
+            margin: 0;
+        }
+        .a {
+            color: purple;
+            font-size: 2.0rem;
+            border: 1px solid red;
+        }
+        .b {
+            color: #bada55;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Element.classList property</h1>
+    <ul>
+        <li><code>element.classList.add()</code></li>
+        <li><code>element.classList.remove()</code></li>
+        <li><code>element.classList.toggle()</code></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quo asperiores saepe? Voluptatum unde itaque suscipit dicta similique inventore placeat voluptatibus, culpa officia labore sint ipsa! Nihil obcaecati modi voluptates repellendus pariatur repellat tenetur neque quos nisi possimus! Veritatis, iure pariatur tempore fugiat eaque in. Dolores tempora velit recusandae ex.</p>   
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quo asperiores saepe? Voluptatum unde itaque suscipit dicta similique inventore placeat voluptatibus, culpa officia labore sint ipsa! Nihil obcaecati modi voluptates repellendus pariatur repellat tenetur neque quos nisi possimus! Veritatis, iure pariatur tempore fugiat eaque in. Dolores tempora velit recusandae ex.</p>    
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quo asperiores saepe? Voluptatum unde itaque suscipit dicta similique inventore placeat voluptatibus, culpa officia labore sint ipsa! Nihil obcaecati modi voluptates repellendus pariatur repellat tenetur neque quos nisi possimus! Veritatis, iure pariatur tempore fugiat eaque in. Dolores tempora velit recusandae ex.</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let paras = document.querySelectorAll('p');
+            for(let p in paras) {
+                paras[p].addEventListener('click', clicked);
+                paras[p].addEventListener('mouseover', addA);
+                paras[p].addEventListener('mouseout', removeA);
+            }
+        });
+
+        function clicked(event)  {
+             let p = event.target;
+             p.classList.toggle("b");
+        }
+
+        function addA(event) {
+            let p = event.target;
+            p.classList.add("a");
+        }
+
+        function removeA(event) {
+            let p = event.target;
+            p.classList.remove("a");
+        }
+    </script>
+</body>
+</html>
